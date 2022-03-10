@@ -88,7 +88,7 @@ int stackTopPrio(STACK_T* stack) {
   void* top;
   listGet(stack->data, stack->data->currentSize-1, &top);
   
-  printf("%c is at the Top!\n",* ( char*)top);
+  // printf("%c is at the Top!\n",* ( char*)top);
   switch(* ( char*) top){
     case '^' : return 3;
     case '*' :  
@@ -99,15 +99,3 @@ int stackTopPrio(STACK_T* stack) {
     default : return 0;
     }
 }
-
-// int stackIsTop(STACK_T* stack, char data) {
-//   void* tmp; 
-//   if(stack == NULL)
-//     return -1;
-//   if(!stack->data->currentSize)
-//     return -2;
-  
-//   listGet(stack->data, stack->data->currentIndex, &tmp);
-//   printf("stack: %c\n", *( char*) tmp);
-//   return *( char*) tmp == data ? 1 :  0;
-// }
